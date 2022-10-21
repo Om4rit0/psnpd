@@ -17,7 +17,7 @@ double input_hours();
 double input_minutes();
 double time_sum(double hr, double min);
 
-double foo(time);
+double foo(double time);
 
 int main(void)
 {
@@ -54,7 +54,7 @@ double time_sum(double hr, double min)
 
 double foo(double time)
 {
-    double temp = ((4 * time * time) / (t + 2)) - 20;
+    double temp = ((4 * time * time) / (time + 2)) - 20;
     
     return temp;
 }
