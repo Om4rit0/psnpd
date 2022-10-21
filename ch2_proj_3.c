@@ -21,7 +21,18 @@ double foo(double time);
 
 int main(void)
 {
+    double hr,
+           min,
+           time,
+           temp;
+
+    hr = input_hours();
+    min = input_minutes();
+    time = time_sum(hr, min);
     
+    temp = foo(time);
+
+    printf("Tempuratur diminished is %.2lf Degree Celsius\n", temp);
 }
 
 double input_hours()
