@@ -8,4 +8,4 @@
 - [x] 1) Mileage Reimbursement Calculator
 - [x] 2) Hydro Electric Dam Power Calculator
 - [x] 3) Freezer Tempurature 
-- [ ] 4) Fahrenheit to Celsius Covertor
+- [x] 4) Fahrenheit to Celsius Covertor
