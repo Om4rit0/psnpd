@@ -56,3 +56,4 @@ double calc(double diff)
 {
     return (diff * MILEAGE);
 }
+
