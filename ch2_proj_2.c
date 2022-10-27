@@ -50,7 +50,7 @@ double input_height()
     double i;
 
     printf("Insert Height of The Dam => "); // Prompts For 1st Input
-    scanf("%lf", &i); // Assign Input to Memory;
+    scanf("%lf", &i); // Assign Input to Memory
 
     return i;
 }
