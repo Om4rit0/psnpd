@@ -1,7 +1,7 @@
 # pspnd
 
 ## This is an application of the book named:
-    Problem Solving and Program Design in C
+    Problem Solving and Program Design in C [7th Edition]
 
         
 # TODO
