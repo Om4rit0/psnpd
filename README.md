@@ -1,10 +1,6 @@
-# pspnd
-
-## This is an application of the book named:
-    Problem Solving and Program Design in C [7th Edition]
-
+# Problem Solving and Program Design in C [7th Edition]
         
-# TODO
+## TODO
 Chapter 2:-
 - [x] 1) Mileage Reimbursement Calculator
 - [x] 2) Hydro Electric Dam Power Calculator
