@@ -126,6 +126,6 @@ void set_volumes()
 }
 void set_weights()
 {
-    leftover_volume = quantity * material_unit_volume - unit_weight;
+    leftover_volume = material_unit_volume - unit_weight;
     leftover_weight = leftover_volume * density;
 }
