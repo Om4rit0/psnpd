@@ -55,10 +55,18 @@ int main(void)
     get_material();
     set_rim();
     total_weight();
+    set_volumes();
+    set_weights();
     
     /* Display the weight of the batch of washers */
-    printf("\nThe expected weight of the batch is %.2f", weight);
-    printf(" grams.\n");
+    printf("\nThe expected weight of the batch is %.2f grams", weight);
+
+    /* Display Area of Material Needed */
+    printf("\nThe area of needed material is %.2lf square centemeters\n", material_unit_area);
+    
+    /* Display Weight of Leftover Material */
+    printf("The weight of leftover material is %.2lf grams\n", leftover_weight);
+    
 }
 
 void get_washer()
