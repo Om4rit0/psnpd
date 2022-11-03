@@ -86,7 +86,7 @@ void get_material()
     printf("Material Length> ");
     scanf("%lf", &material_length);
     
-    printf("Material Width");
+    printf("Material Width> ");
     scanf("%lf", &material_width);
     
     
@@ -126,6 +126,6 @@ void set_volumes()
 }
 void set_weights()
 {
-    leftover_volume = material_unit_volume - unit_weight;
+    leftover_volume = quantity * material_unit_volume - unit_weight;
     leftover_weight = leftover_volume * density;
 }
