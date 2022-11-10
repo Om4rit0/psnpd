@@ -7,7 +7,5 @@ Chapter 2:-
 - [x] 3) Freezer tempurature.
 - [x] 4) Fahrenheit to Celsius covertor.
 
-<break\>
-
 Chapter 3:-
 - [x] 1) Loan payment calculator.
