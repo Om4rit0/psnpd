@@ -2,61 +2,34 @@
 
 int main(void)
 {
+  double item,
+         product;
+  
+  double x,
+         y,
+         absolute_difference;
 
-  /* Declare Variables*/
-  double age,
-         water,
-         year,
-         speed,
-         x, y, z,
-         w;
-  int n,
-      condition_test_age,
-      condition_test_water,
-      condition_test_year,
-      condition_test_speed,
-      condition_test_variables,
-      condition_test_w;
+  double var,
+         zero_count,
+         minus_sum,
+         plus_sum;
+  /* Assignment (a) */
+    if (item != 0)
+      product = item * product;
+    printf("%.2lf\n" ,product);
 
+  /* Assignment (b) */
+    absolute_difference = x - y;
+    if (absolute_difference < 0)
+      absolute_difference *= -1;
+    printf("%.2lf\n" ,absolute_difference);
 
-  /* Get Inputs */
-    printf("Enter Age> ");
-    scanf("%lf", &age);
+  /* Assignment (c) */
+    if (x == 0)
+      zero_count += 1;
+    if(x < 0)
+      minus_sum += x;
+    if(x > 0)
+      plus_sum += x;
 
-    printf("Enter water> ");
-    scanf("%lf", &water);
-
-    printf("year> ");
-    scanf("%lf", &year);
- 
-    printf("speed> ");
-    scanf("%lf", &speed);
-
-    printf("variable X> ");
-    scanf("%lf", &x);
-    printf("variable Y> ");
-    scanf("%lf", &y);
-    printf("variable Z> ");
-    scanf("%lf", &z);
-
-    printf("Enter W> ");
-    scanf("%lf", &w);
-    
-
-  /* Evaluate Conditions */
-    condition_test_age = ((18 <= age) && (age <= 21));       // Evaluating Age Condition
-    condition_test_water = ((water < 1.5) && (0.1 < water)); // Evaluating Water Condition
-    condition_test_year = (n % 4 == 0);                      // Evaluating Year Condition
-    condition_test_speed = (!(speed > 55));                  // Evaluating Speed Condition
-    condition_test_variables = ((y < z) && (x < y));         // Evaluating Variables Condition
-    condition_test_w = ((w == 6) || !(w > 3));               // Evaluating W Condition
-
-
-  /* Print Formated Outputs */
-    printf("Age: %i\n", condition_test_age);
-    printf("Water: %i\n", condition_test_water);
-    printf("Year: %i\n", condition_test_year);
-    printf("Speed: %i\n", condition_test_speed);
-    printf("Variables: %i\n", condition_test_variables);
-    printf("W: %i\n", condition_test_w);
 }
