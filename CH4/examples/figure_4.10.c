@@ -74,18 +74,20 @@ void take_inputs(void)
 void comp_use_charge(int previous, int current, int use_last_year)
 {
   double used = (double) current - previous;
-  use_charge = used * PER_1000_CHG;
 
-  if (used <= ((CONSERV_RATE / 100.0) * use_last_year))
+  double guideline_test = (CONSERV_RATE / 100.0) * use_last_year;
+
+  if (used <= guideline_test)
   {
     use_charge = used * PER_1000_CHG;
   }
-  else 
+  else if (used >= guideline_test)
   {
     printf("Use charge is at %.2f times ", OVERUSE_CHG_RATE);
     printf("normal rate since use of\n");
-    printf("%lf units exceeds %d percent ", used, CONSERV_RATE);
+    printf("%.2lf units exceeds %d percent ", used, CONSERV_RATE);
     printf("of last year's %d-unit use.\n", use_last_year);
+
     use_charge = used * OVERUSE_CHG_RATE * PER_1000_CHG;
   }
 }
