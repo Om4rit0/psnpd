@@ -9,7 +9,7 @@
   
   void take_inputs(void);
 
-  double comp_use_charge(int previous, int current); // Computes Use Charge taking previous and current reading as inputs
+  void comp_use_charge(int previous, int current); // Computes Use Charge taking previous and current reading as inputs
                                                      
   double comp_late_charge(double unpaid); // Computes late charge
                                           
@@ -29,6 +29,13 @@ int main(void)
 {
   instruct();
   take_inputs();
+
+  comp_use_charge(previous, current); // Computes Late Charge
+  comp_late_charge(unpaid); // Computes late charge
+
+  bill = late_charge + use_charge + DEMAND_CHG + unpaid; // Computes bill
+
+  display_bill(late_charge, bill, unpaid); // Prints out desired Output
 }
 
 void instruct(void)
@@ -51,14 +58,14 @@ void take_inputs(void)
   printf("Enter unpaid balance> ");
   scanf("%lf", &unpaid);
 
-  printf("Enter previous reading");
+  printf("Enter previous reading> ");
   scanf("%d", &previous);
 
-  printf("Enter current reading");
+  printf("Enter current reading> ");
   scanf("%d", &current);
 }
 
-double comp_use_charge(int previous, int current)
+void comp_use_charge(int previous, int current)
 {
   double used = (double) current - previous;
   use_charge = used * PER_1000_CHG;
@@ -66,8 +73,6 @@ double comp_use_charge(int previous, int current)
 
 double comp_late_charge(double unpaid)
 {
-  double late_charge;
-  
   if (unpaid > 0)
     late_charge = LATE_CHG;
   else
@@ -78,5 +83,10 @@ double comp_late_charge(double unpaid)
 
 void display_bill(double late_charge, double bill, double unpaid)
 {
-  
+  if (late_charge > 0.0)
+  {
+    printf("\nBill includes $%.2f late charge", late_charge);
+    printf(" on unpaid balance of $%.2f\n", unpaid);
+  }
+  printf("\nTotal due = $%.2f\n", bill);
 }
