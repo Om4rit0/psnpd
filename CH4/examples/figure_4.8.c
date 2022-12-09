@@ -6,15 +6,16 @@
 
 /* Function Prototypes */
   void instruct(void); // Instruct user about the program purpose and method of interacting
-                       
+  
+  void take_inputs(void);
+
   double comp_use_charge(int previous, int current); // Computes Use Charge taking previous and current reading as inputs
                                                      
   double comp_late_charge(double unpaid); // Computes late charge
                                           
   void display_bill(double late_charge, double bill, double unpaid); // Prints out bill taking late charge, bill, and unpaid as inputs
 
-int main(void)
-{
+  /* Global Variables */
   int previous,
       current,
       used;
@@ -22,8 +23,12 @@ int main(void)
          bill,
          use_charge,
          late_charge;
-  
+
+
+int main(void)
+{
   instruct();
+  take_inputs();
 }
 
 void instruct(void)
@@ -38,17 +43,37 @@ void instruct(void)
   printf("and current meter readings\n");
   printf("on separate lines after the prompts.\n");
   printf("Press <return> or <enter> after ");
-  printf("typing each number.\n\n");
+  printf("typing each number.\n-------------------------------\n\n");
+}
+
+void take_inputs(void)
+{
+  printf("Enter unpaid balance> ");
+  scanf("%lf", &unpaid);
+
+  printf("Enter previous reading");
+  scanf("%d", &previous);
+
+  printf("Enter current reading");
+  scanf("%d", &current);
 }
 
 double comp_use_charge(int previous, int current)
 {
-  
+  double used = (double) current - previous;
+  use_charge = used * PER_1000_CHG;
 }
 
 double comp_late_charge(double unpaid)
 {
+  double late_charge;
   
+  if (unpaid > 0)
+    late_charge = LATE_CHG;
+  else
+    late_charge = 0.0;
+
+  return late_charge;
 }
 
 void display_bill(double late_charge, double bill, double unpaid)
